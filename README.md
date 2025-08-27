@@ -208,14 +208,14 @@ select count(*) from table where ...;
 
 Combien de film dure plus d'1h30 ?
 ```sql
-
+select count(*) from films where duree > 90;
 ```
 
 #### Somme
 
 La fonction `sum()` permet d'additioner les valeurs d'une colonne.
 
-Affichez le prix de tout les films du realisateur `Verhoeven Paul`
+Affichez le prix de tous les films du realisateur `Verhoeven Paul`
 ```sql
 
 ```
