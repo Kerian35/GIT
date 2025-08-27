@@ -194,9 +194,9 @@ select max(budget) from films where date_de_sortie = 1974;
 
 La fonction `avg()` permet d'obtenir la moyenne.
 
-Afficher la moyenne de durÃ©e des films
+Afficher la moyenne de durée des films
 ```sql
-
+select avg(duree) from films;
 ```
 
 #### Compter le nombre d'enregistrement
@@ -250,7 +250,7 @@ Affichez les 15 premiers caractères du synopsis de chaque film
 select titre, SUBSTRING(synopsis, 1, 15) from films;
 ```
 
-Affichez les caractÃ¨res du synopsis jusqu'au premier point de chaque film (vous aurez besoin d'une autre fonction pour y parvenir)
+Affichez les caractères du synopsis jusqu'au premier point de chaque film (vous aurez besoin d'une autre fonction pour y parvenir)
 ```sql
 
 ```
