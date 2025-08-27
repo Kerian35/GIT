@@ -238,16 +238,16 @@ La fonction `replace()` permet de remplacer des caractÃ¨res dans une chaÃ®ne
 
 A partir de la requÃªte prÃ©cÃ©dente, affichez le nom et le prenom des acteurs dans une seule colonne nommÃ©e acteur (ex: `MCDOWELL MALCOLM`) en affichant que le prÃ©nom `Alain` et en remplaÃ§ant les `a` par des `o`. 
 ```sql
-
+select concat(nom, " " , replace(prenom, "A", "O")) as acteur from acteurs where prenom = "alain";
 ``` 
 
 ##### Substring
 
-La fonction `substring()` est utilisÃ©e pour segmenter une chaÃ®ne de caractÃ¨re. Cela permet dâ€™extraire une partie dâ€™un chaÃ®ne, par exemple pour tronquer un texte.
+La fonction `substring()` est utilisée pour segmenter une chaîne de caractère. Cela permet d'extraire une partie d'une chaîne, par exemple pour tronquer un texte.
 
-Affichez les 15 premiers caractÃ¨res du synopsis de chaque film
+Affichez les 15 premiers caractères du synopsis de chaque film
 ```sql
-
+select titre, SUBSTRING(synopsis, 1, 15) from films;
 ```
 
 Affichez les caractÃ¨res du synopsis jusqu'au premier point de chaque film (vous aurez besoin d'une autre fonction pour y parvenir)
