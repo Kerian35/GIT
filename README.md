@@ -160,12 +160,12 @@ select prenom, nom from realisateurs where prenom not like "%a%" order by prenom
 
 Afficher toutes les dates de sorties
 ```sql
-
+select date_de_sortie from films group by date_de_sortie;
 ```
 
 Fonctionne aussi avec un `distinct`, il permet de retourner que les valeurs uniques.
 ```sql
-
+select distinct date_de_sortie from films;
 ```
 
 ### Fonctions SQL
