@@ -146,17 +146,17 @@ select colonnne from table order by colonne ASC, colonne_2 DESC, colonne_3 ASC, 
 
 Liste les titres de films par ordre descendant
 ```sql
-
+select titre from films order by titre DESC;
 ```
 
-Liste le nom et le prÃ©nom des rÃ©alisateurs par ordre ascendant pour le nom et desendant pour le prenom si le prÃ©nom ne comporte pas la lettre `a`.
+Liste le nom et le prénom des réalisateurs par ordre ascendant pour le nom et desendant pour le prenom si le prénom ne comporte pas la lettre `a`.
 ```sql
-
+select prenom, nom from realisateurs where prenom not like "%a%" order by prenom DESC, nom ASC;
 ```
 
 ### Groupe
 
-`group by` permet de grouper un ou plusieurs rÃ©sultats. Cette instruction est souvent utilisÃ©e avec des fonctions.
+`group by` permet de grouper un ou plusieurs résultats. Cette instruction est souvent utilisée avec des fonctions.
 
 Afficher toutes les dates de sorties
 ```sql
