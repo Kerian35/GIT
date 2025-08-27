@@ -43,7 +43,8 @@ La base de donnÃ©es quant Ã  elle se compose de diffÃ©rentes tables (ex: fi
 Liste les titres des films
 
 ```sql
-
+show tables;
+select Titre from Film;
 ```
 
 Il est possible d'ajouter des commentaires comme dans tous les langages de programmation.
