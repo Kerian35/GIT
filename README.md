@@ -185,7 +185,9 @@ select min(duree) as Durée_Minimale from films;
 
 Afficher le film avec le plus grand budget en renommant la colonne pour les films sortis en 1983, 1954 et 1974
 ```sql
-
+select max(budget) from films where date_de_sortie = 1983;
+select max(budget) from films where date_de_sortie = 1954;
+select max(budget) from films where date_de_sortie = 1974;
 ```
 
 #### Moyenne
