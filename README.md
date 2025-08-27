@@ -100,7 +100,7 @@ Pour cela, vous pouvez aussi vous servir de differents operateurs :
 - `and` & `or` -> Opérateurs logiques pour ajouter d'autres conditions ;
 - `in` -> VÃ©rifie si la valeur est Ã©gale Ã  celle dans la liste fourni (ex: `where colonne in ( valeur1, valeur2, valeur3, ... )`) ;
 - `between` -> permet de sÃ©lectionner dans une intervalle de  donnÃ©es ;
-- `like` -> permet de filtrer sur un modÃ¨le particulier (plus simple que les regex).
+- `like` -> permet de filtrer sur un modèle particulier (plus simple que les regex).
 
 ```sql
 select colonne from table where colonne = "toto" or colonne = "tata";
@@ -123,17 +123,17 @@ select titre from films where date_de_sortie between 1986 and 1992 and date_de_s
 
 Liste les genres commençant par la lettre `r`
 ```sql
-
+select * from genres where nom like "r%";
 ```
 
-Liste les acteurs avec `o` pour troisiÃ¨me lettre du prÃ©nom
+Liste les acteurs avec `o` pour troisième lettre du prénom
 ```sql
-
+select * from acteurs where prenom like "__o%";
 ```
 
-Liste les rÃ©alisateurs avec un nom ne finissant pas par `ood`
+Liste les réalisateurs avec un nom ne finissant pas par `ood`
 ```sql
-
+select * from realisateurs where nom not like "%ood";
 ```
 
 ### Mettre de l'ordre
