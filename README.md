@@ -89,15 +89,15 @@ select id, titre as title, duree as duration, date_de_sortie as release_date, sy
 
 ### Ajouter des conditions
 
-L'instruction `where` dans une requÃªte SQL permet d'ajouter une ou plusiseurs conditions. Cela permet dâ€™obtenir uniquement les informations désirées.
+L'instruction `where` dans une requête SQL permet d'ajouter une ou plusiseurs conditions. Cela permet d'obtenir uniquement les informations désirées.
 ```sql
 select colonne from table where colonne opérateur condition;
 ```
 
 Pour cela, vous pouvez aussi vous servir de differents operateurs :
 - `=` -> Egal ;
-- `!=` -> pas Ã©gal ;
-- `and` & `or` -> OpÃ©rateurs logiques pour ajouter d'autres conditions ;
+- `!=` -> pas Egal ;
+- `and` & `or` -> Opérateurs logiques pour ajouter d'autres conditions ;
 - `in` -> VÃ©rifie si la valeur est Ã©gale Ã  celle dans la liste fourni (ex: `where colonne in ( valeur1, valeur2, valeur3, ... )`) ;
 - `between` -> permet de sÃ©lectionner dans une intervalle de  donnÃ©es ;
 - `like` -> permet de filtrer sur un modÃ¨le particulier (plus simple que les regex).
@@ -106,22 +106,22 @@ Pour cela, vous pouvez aussi vous servir de differents operateurs :
 select colonne from table where colonne = "toto" or colonne = "tata";
 ```
 
-Liste les acteurs ayant le prÃ©nom `josÃ©`
+Liste les acteurs ayant le prÃ©nom `josé`
 ```sql
-
+select * from acteurs where prenom = "José";
 ``` 
 
 Liste les titres de films sortis entre 1986 & 1992
 ```sql
-
+select titre from films where date_de_sortie between 1986 and 1992;
 ```
 
 Liste les titres de films sortis entre 1986 & 1992, mais pas ceux de 1990
 ```sql
-
+select titre from films where date_de_sortie between 1986 and 1992 and date_de_sortie <> 1990;
 ```
 
-Liste les genres commenÃ§ant par la lettre `r`
+Liste les genres commençant par la lettre `r`
 ```sql
 
 ```
