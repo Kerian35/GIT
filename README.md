@@ -217,7 +217,8 @@ La fonction `sum()` permet d'additioner les valeurs d'une colonne.
 
 Affichez le prix de tous les films du realisateur `Verhoeven Paul`
 ```sql
-
+select * from realisateurs where nom = "Verhoeven" and prenom = "Paul";      -- ID = 44
+select sum(budget) from films where realisateur_id = 44;
 ```
 
 #### Jouer avec les chaines de caractÃ¨res
