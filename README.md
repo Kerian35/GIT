@@ -44,12 +44,12 @@ Liste les titres des films
 
 ```sql
 show tables;
-select Titre from Film;
+select Titre from films;
 ```
 
 Il est possible d'ajouter des commentaires comme dans tous les langages de programmation.
 ```sql
-select titre from films; -- SÃ©lÃ©ctionne les titres des films
+select titre from films; -- Selectionne les titres des films
 ```
 Il existe diffÃ©rents mÃ©thodes pour Ã©crire un commentaire :
 - `-- commentaire` -> commentaire jusquâ€™Ã  la fin de la ligne ;
@@ -63,7 +63,7 @@ select * from table; -- SÃ©lÃ©ctionne toutes les colonnes de la table
 
 Afficher toutes les donnÃ©es de la table films
 ```sql
-
+select * from films;
 ```
 En effet, la table comporte beaucoup plus de colonnes que sur le schÃ©ma qui n'est donc pas Ã  jour.
 Il est recommandÃ© de commencer avec une requÃªte gÃ©nÃ©rique et de filtrer petit Ã  petit sur les donnÃ©es qui vous intÃ©ressent.
@@ -84,18 +84,18 @@ select colonne as colonne_alias from table;
 
 Renommer toute la table films en anglais (colonne et nom de de la table)
 ```sql
-
+select id, titre as title, duree as duration, date_de_sortie as release_date, synopsis, budget, realisateur_id as director_id from films as movies;
 ```
 
 ### Ajouter des conditions
 
-L'instruction `where` dans une requÃªte SQL permet d'ajouter une ou plusiseurs conditions. Cela permet dâ€™obtenir uniquement les informations dÃ©sirÃ©es.
+L'instruction `where` dans une requÃªte SQL permet d'ajouter une ou plusiseurs conditions. Cela permet dâ€™obtenir uniquement les informations désirées.
 ```sql
-select colonne from table where colonne opÃ©rateur condition;
+select colonne from table where colonne opérateur condition;
 ```
 
-Pour cela, vous pouvez aussi vous servir de diffÃ©rents opÃ©rateurs :
-- `=` -> Ã©gal ;
+Pour cela, vous pouvez aussi vous servir de differents operateurs :
+- `=` -> Egal ;
 - `!=` -> pas Ã©gal ;
 - `and` & `or` -> OpÃ©rateurs logiques pour ajouter d'autres conditions ;
 - `in` -> VÃ©rifie si la valeur est Ã©gale Ã  celle dans la liste fourni (ex: `where colonne in ( valeur1, valeur2, valeur3, ... )`) ;
