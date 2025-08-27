@@ -225,11 +225,11 @@ select sum(budget) from films where realisateur_id = 44;
 
 ##### Concat
 
-La fonction `concat()` permet de concatÃ©ner les valeur de plusieurs colonnes pour ne former quâ€™une seule chaÃ®ne de caractÃ¨re.
+La fonction `concat()` permet de concaténer les valeurs de plusieurs colonnes pour ne former qu'une seule chaîne de caractère.
 
-Affichez le nom et le prenom des acteurs dans une seule colonne nommÃ©e acteur (ex: `MCDOWELL MALCOLM`)
+Affichez le nom et le prenom des acteurs dans une seule colonne nommée acteur (ex: `MCDOWELL MALCOLM`)
 ```sql
-
+select concat(nom, " " , prenom) as acteur from acteurs;
 ```
 
 ##### Replace
