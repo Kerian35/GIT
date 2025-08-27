@@ -180,7 +180,7 @@ Par dÃ©faut, si la colonne n'est pas renommÃ©, elle gardera le nom de la fon
 
 Afficher le film avec la plus petite duree en renommant la colonne
 ```sql
-
+select min(duree) as Durée_Minimale from films;
 ```
 
 Afficher le film avec le plus grand budget en renommant la colonne pour les films sortis en 1983, 1954 et 1974
